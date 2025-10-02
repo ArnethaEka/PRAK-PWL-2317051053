@@ -25,7 +25,7 @@ class ProfileController extends Controller
             'nama'=> $nama,
 
 
-            'nim' => $nim,
+            'npm' => $npm,
 
 
             'kelas'=> $kelas
