@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mata_kuliah', function (Blueprint $table) {
-            $table->id();                         // kolom id (primary key, auto increment)
-            $table->string('nama_mk', 150);       // kolom nama mata kuliah
-            $table->integer('sks');               // kolom jumlah SKS
-            $table->timestamps();                 // kolom created_at & updated_at
+            $table->uuid('id')->primary(); // UUID, bukan bigint
+            $table->string('nama_mk');
+            $table->integer('sks');
+            $table->timestamps();
         });
     }
 
@@ -25,5 +25,5 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('mata_kuliah');
-}
+    }
 };
